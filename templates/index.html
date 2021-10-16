@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">API Map</h1>
+        <div class="table">
+            <a href="/api/v1/stores" class="table__row-left">GET /api/v1/stores/</a>
+            <div class="table__row-right">Возвращает список магазинов</div>
+            <a href="/api/v1/stores/1" class="table__row-left">GET /api/v1/stores/&ltstore_id&gt/</a>
+            <div class="table__row-right">Возвращает информацию о конкретном магазине и
+                список всех товаров в наличии на момент запроса с их количеством</div>
+            <a href="/api/v1/stores/1/buy" class="table__row-left">POST /api/v1/stores/&ltstore_id&gt/buy/</a>
+            <div class="table__row-right">Ендпоинт для покупки товаров в магазине</div>
+            <a href="/api/v1/stores/1/add" class="table__row-left">POST /api/v1/stores/&ltstore_id&gt/add/</a>
+            <div class="table__row-right">Ендпоинт для добавления товара в магазин.</div>
+        </div>
+    </div>
+</body>
+</html>
